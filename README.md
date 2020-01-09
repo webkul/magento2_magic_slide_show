@@ -22,7 +22,3 @@ For Magento2 MagicSlideShow module's working process follow user guide – https
 #Support
 
 Find us our support policy - https://store.webkul.com/support.html/
-
-#Refund
-
-Find us our refund policy - https://store.webkul.com/refund-policy.html/
