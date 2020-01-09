@@ -1,0 +1,64 @@
+/**
+ * Webkul MagicSlideShow.css
+ *
+ * @category  Webkul
+ * @package   Webkul_MagicSlideShow
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ .magicslideshow {
+     position: relative;
+ }
+
+.wk_slider_area {
+    position: relative;
+    display:inline-block;
+    box-sizing: border-box;
+}
+
+.wk_slider {
+    float: left;
+    position: relative;
+}
+
+.wk_slider img{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    max-height: 100%;
+}
+
+.wk_description {
+    background-color: rgba(8, 8, 8, 0.58);
+    position: absolute;
+    border: none;
+    font-size: 135%;
+    display: inline-block;
+    color: white;
+    padding: 1%;
+    z-index: 2;
+    box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+}
+
+.wk_top
+{
+    top: 0px;
+    left: 0px;
+}
+
+.wk_bottom
+{
+    bottom: 0px;
+}
+
+.wk_view_port
+{
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+    display: inline-block;
+    box-sizing: border-box;
+}

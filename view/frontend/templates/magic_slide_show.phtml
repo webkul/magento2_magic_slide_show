@@ -1,0 +1,61 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getAssetUrl('Webkul_MagicSlideShow::css/owl.carousel.min.css')?>" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<?php echo $block->getAssetUrl('Webkul_MagicSlideShow::css/owl.theme.default.min.css')?>" type="text/css" rel="stylesheet">
+<link href="<?php /* @escapeNotVerified */echo $block->getAssetUrl('Webkul_MagicSlideShow::css/magicSlideShow.css'); ?>" type="text/css" rel="stylesheet" />
+<?php
+$desc = $block->description();
+$links = $block->imageLink();
+$position = $block->getPosition();
+$images = $block->getImageDetailsUrlByIds();
+
+if (count($images)){
+    ?>
+    <div class="wk_main" 
+        data-time = "<?php /*   @escapeNotVerified */echo $block->escapeHtml($block->getData('transitionTime')); ?>"
+        data-transitioneffect = "<?php /* @escapeNotVerified */echo $block->escapeHtml($block->getData('effect')); ?>" 
+        data-width = "<?php echo $block->escapeHtml($block->getSliderwidth());?>" 
+        data-ratio = "<?php echo $block->escapeHtml($block->getRatio());?>" 
+        data-height = "<?php echo $block->escapeHtml($block->getSliderheight());?>"
+        data-items = "<?php echo $block->escapeHtml($block->getItemsCount());?>"
+        >
+    <div class="owl-carousel" >
+    <?php
+    foreach($images as $key=>$value){
+        $linkHref = '#';
+        $descDetail = '';
+        if(isset($links[$key]))
+        {
+            $linkHref = $block->escapeHtml($links[$key]);
+        }
+        if(isset($desc[$key]))
+        {
+            $descDetail = $block->escapeHtml($desc[$key]);
+        }
+        
+        ?>
+            <div class="item">
+                <a href="<?php /* @escapeNotVerified */echo $linkHref; ?>">
+                    <img class="wk_image"
+                    src="<?php /* @escapeNotVerified */echo $value ; ?>"
+                    alt="image" />
+                </a>
+                <?php if (isset($desc[$key]) && $desc[$key] != "")
+                    {?>
+                        <div class="wk_description <?php /* @escapeNotVerified */echo $position; ?>" >
+                            <?php /* @escapeNotVerified */echo $descDetail;?>
+                        </div>
+                <?php } ?>
+            </div>
+        <?php
+    } 
+    ?>
+    </div>
+    </div>
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "WkMagicSlideShow": {}
+            }
+        }
+    </script>    
+    <?php
+}

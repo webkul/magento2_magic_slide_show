@@ -1,0 +1,18 @@
+Legend
+
++ Features
+- Bugs
+
+-------------------------------- Version 2.0.1 --------------------------------------
+    
+    + Implemented Owl Carousel for slides
+    - fixed bugs
+
+-------------------------------- Version 2.0.0 --------------------------------------
+
+    + Can add sliders in required cms page.
+    + Admin can provide different size to different slider.
+    + Admin can also provide different effect to different Sliders.
+    + Admin can add Description and link on each images of slider.
+    + Also made slider to be responsive.
+    + Add different images for different sliders.

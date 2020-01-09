@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * height.phtml
+ *
+ * @category  Webkul
+ * @package   Webkul_MagicSlideShow
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+
+
+?>
+<?php
+$element = $block->getElement();
+$fieldId = ($element->getHtmlContainerId()) ? ' id="' . $element->getHtmlContainerId() . '"' : '';
+$fieldClass = "field admin__field field-{$element->getId()} {$element->getCssClass()}";
+$fieldClass .= ($element->getRequired()) ? ' required' : '';
+$fieldAttributes = $fieldId . ' class="' . $fieldClass . '" ' . $block->getUiId('form-field', $element->getId());
+?>
+<div<?php /* @escapeNotVerified */ echo $fieldAttributes ?>>
+    <?php echo $element->getLabelHtml() ?>
+    <div class="control admin__field-control">
+        <input id="options_fieldset73d87fcc183d38620f587b5a1dba4199_sliderheight" name="parameters[sliderHeight]" data-ui-id="wysiwyg-widget-options-fieldset-element-text-parameters-sliderheight"  class="widget-option input-text admin__control-text" type="text" data-validate="{required:true, 'validate-digits':true}">
+    </div>
+</div>

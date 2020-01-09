@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_MagicSlideShow
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Webkul_MagicSlideShow::magicslideshow" title="Magic Slide Show" module="Webkul_MagicSlideShow" sortOrder="10" resource="Webkul_MagicSlideShow::magicslideshow"/>
+        <add id="Webkul_MagicSlideShow::sliderimages" title="Manage Silder Images" module="Webkul_MagicSlideShow" sortOrder="11" parent="Webkul_MagicSlideShow::magicslideshow" action="magicslideshow/sliderimages" resource="Webkul_MagicSlideShow::sliderimages"/>
+        <add id="Webkul_MagicSlideShow::group" title="Manage Slider Group" module="Webkul_MagicSlideShow" sortOrder="12" parent="Webkul_MagicSlideShow::magicslideshow" action="magicslideshow/group" resource="Webkul_MagicSlideShow::group"/>
+    </menu>
+</config>
